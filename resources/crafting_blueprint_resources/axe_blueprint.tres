@@ -1,7 +1,26 @@
-[gd_resource type="Resource" script_class="CraftingBlueprintResource" load_steps=2 format=3 uid="uid://cu48uo210j2dg"]
+[gd_resource type="Resource" script_class="CraftingBlueprintResource" load_steps=6 format=3 uid="uid://cu48uo210j2dg"]
 
+[ext_resource type="Script" path="res://resources/crafting_blueprint_resources/blueprint_cost_data.gd" id="1_lfxwn"]
 [ext_resource type="Script" path="res://resources/crafting_blueprint_resources/crafting_blueprint_resource.gd" id="1_yey2h"]
+
+[sub_resource type="Resource" id="Resource_pap2b"]
+script = ExtResource("1_lfxwn")
+item_key = 7
+amount = 1
+
+[sub_resource type="Resource" id="Resource_mj8xq"]
+script = ExtResource("1_lfxwn")
+item_key = 8
+amount = 1
+
+[sub_resource type="Resource" id="Resource_io165"]
+script = ExtResource("1_lfxwn")
+item_key = 14
+amount = 1
 
 [resource]
 script = ExtResource("1_yey2h")
 item_key = 10
+costs = Array[ExtResource("1_lfxwn")]([SubResource("Resource_pap2b"), SubResource("Resource_mj8xq"), SubResource("Resource_io165")])
+need_multitool = true
+need_tinderbox = true

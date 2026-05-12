@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_iw7q6")
-item_key = 14
+item_key = 4
 display_name = "Rope"
 icon = ExtResource("1_m4eka")
 description = "A soft rope"

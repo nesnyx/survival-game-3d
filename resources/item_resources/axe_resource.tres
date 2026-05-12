@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_xjedg")
-item_key = 10
+item_key = 3
 display_name = "Axe"
 icon = ExtResource("1_woole")
 description = "Axe for cutting"
