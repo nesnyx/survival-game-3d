@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CraftingBlueprintResource" load_steps=2 format=3 uid="uid://cu48uo210j2dg"]
+
+[ext_resource type="Script" path="res://resources/crafting_blueprint_resources/crafting_blueprint_resource.gd" id="1_yey2h"]
+
+[resource]
+script = ExtResource("1_yey2h")
+item_key = 10
