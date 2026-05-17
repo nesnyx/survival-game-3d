@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_j2fy1")
-item_key = 7
+item_key = 0
 display_name = "Stick"
 icon = ExtResource("1_627hi")
 description = "A Stick"

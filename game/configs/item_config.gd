@@ -1,39 +1,16 @@
 class_name ItemConfig
 
-
 enum Keys {
 	Stick,
 	Stone,
 	Plant,
 	Axe,
 	Rope,
-	#Log,
-	#Coal,
-	#Mushroom,
-	#Flintstone,
-	#Fruit,
-	#RawMeat,
-	#CookedMeat,
-	#
-	#Pickaxe,
-	#Campfire,
-	#Multitool,
-	#Tinderbox,
-	#Torch,
-	#Tent,
-	#Raft
 }
 
 const CRAFTABLE_ITEM_KEYS:Array[Keys] = [
 	Keys.Axe,
-	#Keys.Pickaxe,
-	#Keys.Campfire,
-	#Keys.Multitool,
 	Keys.Rope,
-	#Keys.Tinderbox,
-	#Keys.Torch,
-	#Keys.Tent,
-	#Keys.Raft
 ]
 
 const ITEM_RESOURCE_PATHS := {
@@ -44,8 +21,15 @@ const ITEM_RESOURCE_PATHS := {
 	Keys.Rope :"res://resources/item_resources/rope_resource.tres"
 }
 
-static  func get_item_resource(key : Keys) -> ItemResource:
-	return load(ITEM_RESOURCE_PATHS.get(key))
+static func get_item_resource(key : Keys) -> ItemResource:
+	# Gunakan .get() agar tidak crash meskipun key tidak ditemukan
+	var path = ITEM_RESOURCE_PATHS.get(key)
+	print("Mencoba memuat Key Indeks: ", key, " | Path Hasil: ", path)
+	if path == null:
+		push_error("Error: Key dengan indeks ", key, " tidak ada di ITEM_RESOURCE_PATHS!")
+		return null
+		
+	return load(path)
 
 
 const CRAFTING_BLUEPRINT_RESOURCE_PATHS := {

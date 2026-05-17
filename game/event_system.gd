@@ -10,7 +10,5 @@ signal INV_inventory_updated
 signal INV_switch_two_item_indexes
 signal INV_add_item
 
-
-
 signal PLA_freeze_player
 signal PLA_unfreeze_player

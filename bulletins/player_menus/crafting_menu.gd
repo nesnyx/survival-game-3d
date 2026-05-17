@@ -29,10 +29,17 @@ func show_crafting_info(item_key : ItemConfig.Keys)->void:
 		item_extra_info_label.text += "\nTindebox"
 	
 	for cost_resource in blueprint.costs:
-		item_extra_info_label.text += "\n%s : %d" % [
-			ItemConfig.get_item_resource(cost_resource.item_key).display_name,
-			cost_resource.amount
-		]
+		var cost_item := ItemConfig.get_item_resource(cost_resource.item_key)
+		
+		# VALIDASI 3: Cegah crash jika bahan baku di dalam blueprint salah/kosong
+		if cost_item != null:
+			item_extra_info_label.text += "\n%s : %d" % [
+				cost_item.display_name,
+				cost_resource.amount
+			]
+		else:
+			push_error("Error: Bahan baku dengan ID %s di blueprint %s tidak valid!" % [cost_resource.item_key, item_resource.display_name])
+			item_extra_info_label.text += "\n[Missing Item] : %d" % cost_resource.amount
 		
 	
 		
