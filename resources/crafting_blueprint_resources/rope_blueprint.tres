@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://resources/crafting_blueprint_resources/blueprint_cost_data.gd" id="1_oreuc"]
 [ext_resource type="Script" path="res://resources/crafting_blueprint_resources/crafting_blueprint_resource.gd" id="2_sispr"]
 
-[sub_resource type="Resource" id="Resource_p6lsh"]
+[sub_resource type="Resource" id="Resource_863ol"]
 script = ExtResource("1_oreuc")
-item_key = 9
+item_key = 2
 amount = 2
 
 [resource]
 script = ExtResource("2_sispr")
-item_key = 14
-costs = Array[ExtResource("1_oreuc")]([SubResource("Resource_p6lsh")])
+item_key = 4
+costs = Array[ExtResource("1_oreuc")]([SubResource("Resource_863ol")])
 need_multitool = true
 need_tinderbox = true

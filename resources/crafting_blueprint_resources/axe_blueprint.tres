@@ -3,24 +3,24 @@
 [ext_resource type="Script" path="res://resources/crafting_blueprint_resources/blueprint_cost_data.gd" id="1_lfxwn"]
 [ext_resource type="Script" path="res://resources/crafting_blueprint_resources/crafting_blueprint_resource.gd" id="1_yey2h"]
 
-[sub_resource type="Resource" id="Resource_pap2b"]
+[sub_resource type="Resource" id="Resource_cqgo0"]
 script = ExtResource("1_lfxwn")
-item_key = 7
+item_key = 0
 amount = 1
 
-[sub_resource type="Resource" id="Resource_mj8xq"]
+[sub_resource type="Resource" id="Resource_npjsa"]
 script = ExtResource("1_lfxwn")
-item_key = 8
+item_key = 1
 amount = 1
 
-[sub_resource type="Resource" id="Resource_io165"]
+[sub_resource type="Resource" id="Resource_f1371"]
 script = ExtResource("1_lfxwn")
-item_key = 14
+item_key = 4
 amount = 1
 
 [resource]
 script = ExtResource("1_yey2h")
-item_key = 10
-costs = Array[ExtResource("1_lfxwn")]([SubResource("Resource_pap2b"), SubResource("Resource_mj8xq"), SubResource("Resource_io165")])
+item_key = 3
+costs = Array[ExtResource("1_lfxwn")]([SubResource("Resource_cqgo0"), SubResource("Resource_npjsa"), SubResource("Resource_f1371")])
 need_multitool = true
 need_tinderbox = true
